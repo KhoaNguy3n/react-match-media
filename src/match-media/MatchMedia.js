@@ -21,6 +21,12 @@ export default class MatchMedia extends Component {
 
   _onMatch(mql) {
     let show = !!mql.matches;
+
+    if(this.props.handleMediaSizeChange
+        && (typeof this.props.handleMediaSizeChange === 'function')) {
+        this.props.onMediaSizeChange(show);
+    }
+
     this.setState({show});
   }
 
