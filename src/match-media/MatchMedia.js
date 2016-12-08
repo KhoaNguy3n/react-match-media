@@ -24,7 +24,7 @@ export default class MatchMedia extends Component {
 
     if(this.props.handleMediaSizeChange
         && (typeof this.props.handleMediaSizeChange === 'function')) {
-        this.props.onMediaSizeChange(show);
+        this.props.handleMediaSizeChange(show);
     }
 
     this.setState({show});
